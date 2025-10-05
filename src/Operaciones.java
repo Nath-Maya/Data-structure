@@ -17,6 +17,13 @@ public class Operaciones {
 
     //Funcion para realizar operacion de Division
     public static int division(int a, int b) {
+
+        //Validamos que el denominador no sea 0 para que la division pueda realizarse
+        if (b == 0) {
+            System.out.println("El segundo numero no puede ser cero");
+            return 0;
+        }
+
         return a / b;
     }
 }
