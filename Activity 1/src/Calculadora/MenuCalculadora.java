@@ -1,3 +1,5 @@
+package Calculadora;
+
 import java.util.Scanner;
 
 public class MenuCalculadora {
@@ -12,15 +14,15 @@ public class MenuCalculadora {
         System.out.println("3. Multiplicacion");
         System.out.println("4. Division");
 
-        //Variable de la opcion que tomara el dato suministrado por el usuario por medio de la consola.
+        //Captura del dato de entrada que suministra el usuario que corresponde a la opcion.
         System.out.println("Ingrese el numero de la opcion que desea ejecutar: ");
         int op = sc.nextInt();
 
-        //Toma del primer numero
+        //Toma del primer numero para realizar el calculo
         System.out.println("Ingrese el primer numero: ");
         int number1 = sc.nextInt();
 
-        //Toma del segundo numero
+        //Toma del segundo numero para realizar el calculo
         System.out.println("Ingrese el segundo numero: ");
         int number2 = sc.nextInt();
 

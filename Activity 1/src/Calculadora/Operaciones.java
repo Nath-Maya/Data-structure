@@ -1,3 +1,5 @@
+package Calculadora;
+
 public class Operaciones {
 
     //Funcion para realizar operacion de  Suma
