@@ -8,6 +8,7 @@ public class MenuCalculadora {
 
         //Menu para seleccionar opciones de la calculadora
         System.out.println("CALCULADORA");
+        System.out.println("==========================================");
         System.out.println("Opciones de operaciones: ");
         System.out.println("1. Suma");
         System.out.println("2. Resta");
