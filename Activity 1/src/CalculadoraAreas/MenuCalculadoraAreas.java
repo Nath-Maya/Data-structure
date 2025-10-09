@@ -19,7 +19,6 @@ public class MenuCalculadoraAreas {
         //Captura de la opcion suministrada por el usuario, sobre la figura que se va a calcular area.
         System.out.print("\nA Que figura le desea calcular el area?");
 
-        //Captura la opcion que el usuario selecciona
         int seleccion = entrada.nextInt();
 
         //Estructura de caso para seleccionar la figura a la cual se desea clacular el area
