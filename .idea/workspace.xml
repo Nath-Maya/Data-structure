@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49433e66-d41e-4aeb-9477-b6967efe7d0c" name="Changes" comment="The sort method of the arrays class is added to sort the numbers in the array from lowest to highest.">
-      <change beforePath="$PROJECT_DIR$/Activity 2/TenNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/Activity 2/TenOrderedNumbers.java" afterDir="false" />
+    <list default="true" id="49433e66-d41e-4aeb-9477-b6967efe7d0c" name="Changes" comment="Rename array variable to ordered Numbers and other settings">
+      <change afterPath="$PROJECT_DIR$/Activity 2/Point_1B/TenOrderedNumbersV2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Activity 2/TenOrderedNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/Activity 2/Point_1A/TenOrderedNumbers.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +55,7 @@
     "Application.MenuCalculadora.executor": "Run",
     "Application.TenNumbers.executor": "Run",
     "Application.TenOrderedNumbers.executor": "Run",
+    "Application.TenOrderedNumbersV2.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
@@ -110,7 +112,7 @@
       <workItem from="1760050104098" duration="199000" />
       <workItem from="1760050314550" duration="1492000" />
       <workItem from="1760051832232" duration="4781000" />
-      <workItem from="1760065120645" duration="1612000" />
+      <workItem from="1760065120645" duration="1995000" />
     </task>
     <task id="LOCAL-00001" summary="Create MenuCalculadora">
       <option name="closed" value="true" />
@@ -216,7 +218,23 @@
       <option name="project" value="LOCAL" />
       <updated>1760065736967</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Rename array variable to ordered Numbers and other settings">
+      <option name="closed" value="true" />
+      <created>1760066858626</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1760066858626</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Rename array variable to ordered Numbers and other settings">
+      <option name="closed" value="true" />
+      <created>1760066891886</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1760066891886</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -245,7 +263,8 @@
     <MESSAGE value="feat: implement number input and sorting in ascending order" />
     <MESSAGE value="Folder organization" />
     <MESSAGE value="The sort method of the arrays class is added to sort the numbers in the array from lowest to highest." />
-    <option name="LAST_COMMIT_MESSAGE" value="The sort method of the arrays class is added to sort the numbers in the array from lowest to highest." />
+    <MESSAGE value="Rename array variable to ordered Numbers and other settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Rename array variable to ordered Numbers and other settings" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
