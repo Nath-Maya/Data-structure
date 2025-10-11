@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="49433e66-d41e-4aeb-9477-b6967efe7d0c" name="Changes" comment="Add program to fill an integer array, display its elements, and prepare for counting even, odd numbers and total sum">
+    <list default="true" id="49433e66-d41e-4aeb-9477-b6967efe7d0c" name="Changes" comment="Add program to classify integers into even and odd numbers&#10;&#10;Implemented VectorNumbers class that:&#10;- Reads user input to fill an integer array&#10;- Separates numbers into even and odd arrays&#10;- Displays the initial vector and the count of even and odd numbers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Activity 2/Point_3/VectorNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/Activity 2/Point_3/VectorNumbers.java" afterDir="false" />
     </list>
@@ -116,7 +116,7 @@
       <workItem from="1760051832232" duration="4781000" />
       <workItem from="1760065120645" duration="2162000" />
       <workItem from="1760145581966" duration="654000" />
-      <workItem from="1760146480680" duration="7324000" />
+      <workItem from="1760146480680" duration="7943000" />
     </task>
     <task id="LOCAL-00001" summary="Create MenuCalculadora">
       <option name="closed" value="true" />
@@ -254,7 +254,15 @@
       <option name="project" value="LOCAL" />
       <updated>1760152351153</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Add program to classify integers into even and odd numbers&#10;&#10;Implemented VectorNumbers class that:&#10;- Reads user input to fill an integer array&#10;- Separates numbers into even and odd arrays&#10;- Displays the initial vector and the count of even and odd numbers">
+      <option name="closed" value="true" />
+      <created>1760153955163</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1760153955163</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +294,8 @@
     <MESSAGE value="Rename array variable to ordered Numbers and other settings" />
     <MESSAGE value="Solve point 2:&#10;Create a program that takes 5 numbers and duplicates them, storing them in a different array than the initial one." />
     <MESSAGE value="Add program to fill an integer array, display its elements, and prepare for counting even, odd numbers and total sum" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add program to fill an integer array, display its elements, and prepare for counting even, odd numbers and total sum" />
+    <MESSAGE value="Add program to classify integers into even and odd numbers&#10;&#10;Implemented VectorNumbers class that:&#10;- Reads user input to fill an integer array&#10;- Separates numbers into even and odd arrays&#10;- Displays the initial vector and the count of even and odd numbers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add program to classify integers into even and odd numbers&#10;&#10;Implemented VectorNumbers class that:&#10;- Reads user input to fill an integer array&#10;- Separates numbers into even and odd arrays&#10;- Displays the initial vector and the count of even and odd numbers" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
