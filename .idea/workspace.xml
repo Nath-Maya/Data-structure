@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49433e66-d41e-4aeb-9477-b6967efe7d0c" name="Changes" comment="Rename array variable to ordered Numbers and other settings">
-      <change afterPath="$PROJECT_DIR$/Activity 2/Point_1B/TenOrderedNumbersV2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Activity 2/TenOrderedNumbers.java" beforeDir="false" afterPath="$PROJECT_DIR$/Activity 2/Point_1A/TenOrderedNumbers.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Activity 2/Point_2/FiveNumbers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,31 +49,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.MenuCalculadora.executor": "Run",
-    "Application.TenNumbers.executor": "Run",
-    "Application.TenOrderedNumbers.executor": "Run",
-    "Application.TenOrderedNumbersV2.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/user/Desktop/USC/S3/Estructura de datos/Activity 1/Calculadora/Activity 2/src",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/user/Desktop/USC/S3/Estructura de datos/Activity 1/untitled/src/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MenuCalculadora.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TenNumbers.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TenOrderedNumbers.executor&quot;: &quot;Run&quot;,
+    &quot;Application.TenOrderedNumbersV2.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/user/Desktop/USC/S3/Estructura de datos/Activity 1/Calculadora/Activity 2/src&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/user/Desktop/USC/S3/Estructura de datos/Activity 1/untitled/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Activity 2/src" />
@@ -112,7 +112,9 @@
       <workItem from="1760050104098" duration="199000" />
       <workItem from="1760050314550" duration="1492000" />
       <workItem from="1760051832232" duration="4781000" />
-      <workItem from="1760065120645" duration="1995000" />
+      <workItem from="1760065120645" duration="2162000" />
+      <workItem from="1760145581966" duration="654000" />
+      <workItem from="1760146480680" duration="1341000" />
     </task>
     <task id="LOCAL-00001" summary="Create MenuCalculadora">
       <option name="closed" value="true" />
