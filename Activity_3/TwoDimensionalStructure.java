@@ -24,5 +24,8 @@ public class TwoDimensionalStructure {
         matrixGenerator.displayMatrices(matrixGenerator.getMatrix1(), "1");
         matrixGenerator.displayMatrices(matrixGenerator.getMatrix2(), "2");
 
+
+        //Menu de operaciones con matrices
+        MatrixOperationsMenu.iniciar();
     }
 }
