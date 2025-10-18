@@ -15,11 +15,14 @@ public class TwoDimensionalStructure {
 
         // Crear una instancia de GenerateMatrix
         GenerateMatrix matrixGenerator = new GenerateMatrix();
+
         // Llamar al metodo para determinar el tamaño de las matrices
         matrixGenerator.sizeMatrix();
+
         // Llamar al metodo para llenar las matrices
         matrixGenerator.fillMatrices(matrixGenerator.inputScanner, matrixGenerator.getMatrix1(), "1");
         matrixGenerator.fillMatrices(matrixGenerator.inputScanner, matrixGenerator.getMatrix2(), "2");
+
         // Llamar al metodo para mostrar las matrices
         matrixGenerator.displayMatrices(matrixGenerator.getMatrix1(), "1");
         matrixGenerator.displayMatrices(matrixGenerator.getMatrix2(), "2");
