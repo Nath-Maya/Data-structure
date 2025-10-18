@@ -29,6 +29,6 @@ public class TwoDimensionalStructure {
 
 
         //Menu de operaciones con matrices
-        MatrixOperationsMenu.iniciar();
+        MatrixOperationsMenu.iniciar(matrixGenerator);
     }
 }

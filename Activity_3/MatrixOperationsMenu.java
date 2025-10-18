@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MatrixOperationsMenu {
 
-    public static void iniciar() {
+    public static void iniciar(GenerateMatrix generateMatrix) {
 
         // Colores ANSI
         final String BLUE_BRIGHT = "\u001B[94m";
@@ -32,22 +32,29 @@ public class MatrixOperationsMenu {
             // va a realizar.
             switch (seleccion) {
                 case 1:
-                    System.out.print("SUMA DE MATRICES.");
+                    System.out.print("\nSUMA DE MATRICES.");
+
+                    // Crea un nuevo objeto suma de tipo SumMatrix, usando las matrices que me
+                    // entrega matrixGenerator a travez de sus getters
+                    SumMatrix suma = new SumMatrix(generateMatrix.getMatrix1(), generateMatrix.getMatrix2());
+
+                    suma.sumMatrices(); // Llama al metodo para sumar las matrices
+                    suma.displaySumMatrix(); // Llama al metodo para mostrar la matriz resultante
                     break;
                 case 2:
-                    System.out.print("RESTA DE MATRICES.");
+                    System.out.print("\nRESTA DE MATRICES.");
                     break;
                 case 3:
                     System.out.print("PRODUCTO ESCALAR.");
                     break;
                 case 4:
-                    System.out.print("MULTIPLICACION DE MATRICES.");
+                    System.out.print("\nMULTIPLICACION DE MATRICES.");
                     break;
                 case 5:
-                    System.out.print("Has salido del programa...⛔");
+                    System.out.print("\nHas salido del programa...⛔");
                     break;
                 default:
-                    System.out.print("Opcion no valida. Por favor seleccione una opcion del 1 al 5.");
+                    System.out.print("\nOpcion no valida. Por favor seleccione una opcion del 1 al 5.");
                     break;
             }
 
