@@ -12,52 +12,45 @@ public class GenerateMatrix {
     // CONSTRUCTOR DE LA CLASE
     public GenerateMatrix(int rows1, int cols1, int rows2, int cols2) {
 
-        this.matrix1 = new int[rows1][cols1];
-        this.matrix2 = new int[rows2][cols2];
+        this.matrix1 = new int[rows][cols];
+        this.matrix2 = new int[rows][cols];
 
     }
 
     // METODOS DE LA CLASE
 
     // Metodo para llenar las matrices con valores ingresados por el usuario
-    public void fillMatrices(Scanner inputScanner) {
+    public void fillMatrices(Scanner inputScanner, int[][] matrix, String matrixName) {
 
-        System.out.println("Ingrese los valores para la matriz 1:");
-        for (int i = 0; i < matrix1.length; i++) {
-            for (int j = 0; j < matrix1[i].length; j++) {
-                // Llenar matrix1
-                matrix1[i][j] = inputScanner.nextInt();
-            }
-        }
-
-        System.out.println("Ingrese los valores para la matriz 2:");
-        for (int i = 0; i < matrix2.length; i++) {
-            for (int j = 0; j < matrix2[i].length; j++) {
-                // Llenar matrix2
-                matrix2[i][j] = inputScanner.nextInt();
+        System.out.println("Ingrese los valores para la" + matrixName + ":");
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                System.out.printf("Elemento [%d][%d]: ", i, j);
+                matrix[i][j] = inputScanner.nextInt();
             }
         }
 
     }
 
     // Metodo para mostrar las matrices
-    public void displayMatrices() {
-        System.out.println("Matriz 1:");
-        for (int i = 0; i < matrix1.length; i++) {
-            for (int j = 0; j < matrix1[i].length; j++) {
-                System.out.print(matrix1[i][j] + " ");
+    public void displayMatrices(int[][] matrix, String matrixName) {
+        System.out.println("Valores de Matriz " + matrixName + ":");
+        for (int[] row : matrix) {
+            for (int value : row) {
+                System.out.print(value + "\t");
             }
             System.out.println();
         }
 
-        System.out.println("Matriz 2:");
-        for (int i = 0; i < matrix2.length; i++) {
-            for (int j = 0; j < matrix2[i].length; j++) {
-                System.out.print(matrix2[i][j] + " ");
-            }
-            System.out.println();
-        }
+    }
 
+    // Metodos getter para acceder a las matrices desde fuera de la clase
+    public int[][] getMatrix1() {
+        return matrix1;
+    }
+
+    public int[][] getMatrix2() {
+        return matrix2;
     }
 
 }
