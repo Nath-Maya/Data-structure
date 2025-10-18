@@ -41,8 +41,16 @@ public class MatrixOperationsMenu {
                     suma.sumMatrices(); // Llama al metodo para sumar las matrices
                     suma.displaySumMatrix(); // Llama al metodo para mostrar la matriz resultante
                     break;
+
                 case 2:
                     System.out.print("\nRESTA DE MATRICES.");
+
+                    // Crea un nuevo objeto resta de tipo MatrixSubtraction, usando las matrices que me
+                    // entrega matrixGenerator a travez de sus getters
+                    MatrixSubtraction resta = new MatrixSubtraction(generateMatrix.getMatrix1(), generateMatrix.getMatrix2());
+
+                    resta.subtractMatrices(); // Llama al metodo para restar las matrices
+                    resta.displaySubtract(); // Llama al metodo para mostrar la matriz resultante
                     break;
                 case 3:
                     System.out.print("PRODUCTO ESCALAR.");
