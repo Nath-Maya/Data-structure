@@ -23,8 +23,11 @@ public class TwoDimensionalStructure {
         // Crear una instancia de GenerateMatrix
         GenerateMatrix matrixGenerator = new GenerateMatrix(rows1, cols1, rows2, cols2);
 
-        matrixGenerator.fillMatrices(inputScanner);
-        matrixGenerator.displayMatrices();
+        matrixGenerator.fillMatrices(inputScanner, matrixGenerator.getMatrix1(), " 1");
+        matrixGenerator.fillMatrices(inputScanner, matrixGenerator.getMatrix2(), " 2");
+
+        matrixGenerator.displayMatrices(matrixGenerator.getMatrix1(), " 1");
+        matrixGenerator.displayMatrices(matrixGenerator.getMatrix2(), " 2");
 
         inputScanner.close();
     }

@@ -12,8 +12,8 @@ public class GenerateMatrix {
     // CONSTRUCTOR DE LA CLASE
     public GenerateMatrix(int rows1, int cols1, int rows2, int cols2) {
 
-        this.matrix1 = new int[rows][cols];
-        this.matrix2 = new int[rows][cols];
+        this.matrix1 = new int[rows1][cols1];
+        this.matrix2 = new int[rows2][cols2];
 
     }
 
@@ -22,10 +22,10 @@ public class GenerateMatrix {
     // Metodo para llenar las matrices con valores ingresados por el usuario
     public void fillMatrices(Scanner inputScanner, int[][] matrix, String matrixName) {
 
-        System.out.println("Ingrese los valores para la" + matrixName + ":");
+        System.out.println("Ingrese los valores para la Matriz # " + matrixName + ":");
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[i].length; j++) {
-                System.out.printf("Elemento [%d][%d]: ", i, j);
+                System.out.printf("Numero # %d: ", i * matrix[i].length + j + 1);
                 matrix[i][j] = inputScanner.nextInt();
             }
         }
