@@ -1,29 +1,4 @@
-# Actividad 3 — Operaciones con matrices 🎯
 
-Breve
-
-Programa en Java con un menú que permite crear dos matrices (enteros), imprimirlas y hacer operaciones: suma, resta, multiplicación matricial y multiplicación por escalar. Todo implementado con funciones y paso de parámetros.
-
-Funciones clave
-
-- Crear/llenar/mostrar matriz 🧾
-- Sumar / Restar ✅
-- Multiplicar matrices × (si dimensiones compatibles) ➗
-- Multiplicar por escalar ✖️
-
-Validaciones rápidas
-
-- Rechazar dimensiones ≤ 0
-- Suma/resta: mismas dimensiones
-- Producto matricial: A.columns == B.rows
-- Revisar que las matrices existan antes de operar
-
-Ejemplo de menú (resumen)
-
-1. Crear matrices A y B
-2. Imprimir A / Imprimir B
-3. Sumar A + B
-4. Restar A - B
 # Actividad 3 — Operaciones con matrices 🧮
 
 Objetivo
@@ -36,6 +11,7 @@ Funcionalidades principales
 - Sumar y restar las matrices (validando dimensiones) ➕➖
 - Multiplicar una matriz por un escalar (pedir un entero y calcular el producto escalar) 🔢✖️
 - Multiplicar las dos matrices (validando compatibilidad de dimensiones) ✖️🔁
+- Salir
 
 Validaciones rápidas
 

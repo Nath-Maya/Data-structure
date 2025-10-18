@@ -34,5 +34,7 @@ public class FiveNumbers {
 
         //Mostrar array FINAL
         System.out.println("Numeros DUPLICADOS:" + Arrays.toString(duplicatedNumbers));
+
+        sc.close();
     }
 }

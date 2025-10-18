@@ -68,5 +68,7 @@ public class MenuCalculadoraAreas {
                 break;
 
         }
+
+        entrada.close();
     }
 }

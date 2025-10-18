@@ -51,7 +51,9 @@ public class VectorNumbers {
         System.out.println("IMPARES: " + oddNumbers.size());
         System.out.println("SUMA: " + sum);
 
-    }
+        sc.close();
 
+    }
+    
 
 }
