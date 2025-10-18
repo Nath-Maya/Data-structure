@@ -21,6 +21,7 @@ public class TenOrderedNumbersV2 {
             //Solicitud de ingreso de cada numero al array
             System.out.println("Número #" + (i + 1) + " - ");
             numbers[i] = sc.nextInt();
+
         }
 
         //Mostrar array antes de ordenar
