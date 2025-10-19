@@ -32,7 +32,7 @@ public class MatrixOperationsMenu {
             // va a realizar.
             switch (seleccion) {
                 case 1:
-                    System.out.print("\nSUMA DE MATRICES.");
+                    System.out.print("\nSUMA DE MATRICES.\n");
 
                     // Crea un nuevo objeto suma de tipo SumMatrix, usando las matrices que me
                     // entrega matrixGenerator a travez de sus getters
@@ -43,11 +43,10 @@ public class MatrixOperationsMenu {
                     break;
 
                 case 2:
-                    System.out.print("\nRESTA DE MATRICES.");
+                    System.out.print("\nRESTA DE MATRICES.\n");
 
                     // Crea un nuevo objeto resta de tipo MatrixSubtraction, usando las matrices que
-                    // me
-                    // entrega matrixGenerator a travez de sus getters
+                    // me entrega matrixGenerator a travez de sus getters
                     MatrixSubtraction resta = new MatrixSubtraction(generateMatrix.getMatrix1(),
                             generateMatrix.getMatrix2());
 
@@ -55,10 +54,22 @@ public class MatrixOperationsMenu {
                     resta.displaySubtract(); // Llama al metodo para mostrar la matriz resultante
                     break;
                 case 3:
-                    System.out.print("PRODUCTO ESCALAR.");
+                    System.out.print("PRODUCTO ESCALAR.\n");
+
+                    // Seleccionar la matriz a utilizar
+                    int[][] selectedMatrix = ScalarMatrix.selectMatrix(generateMatrix);
+                    System.out.print("Ingrese el valor escalar para multiplicar la matriz seleccionada: ");
+
+                    // Leer el valor escalar
+                    int scalarValue = entrada.nextInt();
+                    // Crear una instancia de ScalarMatrix y realizar el producto escalar
+                    ScalarMatrix escalar = new ScalarMatrix(selectedMatrix, scalarValue);
+
+                    escalar.scalarProduct(); // Llama al metodo para calcular el producto escalar
+                    escalar.displayScalar(); // Llama al metodo para mostrar el resultado del producto escalar
                     break;
                 case 4:
-                    System.out.print("\nMULTIPLICACION DE MATRICES.");
+                    System.out.print("\nMULTIPLICACION DE MATRICES.\n");
 
                     // Crea un nuevo objeto multiplicacion de tipo MultiplicationMatrix, usando las
                     // matrices que me
