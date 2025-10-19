@@ -25,14 +25,77 @@ Uso breve
 1. Ejecuta el programa y usa el menú para crear/llenar las matrices.
 2. Selecciona la operación que quieras realizar.
 
-Compilar y ejecutar (ejemplo genérico Java)
 
-```bash
-javac -d out "Activity 3"/*.java
-java -cp out Main
-```
+Clases y métodos
 
-Notas
+- GenerateMatrix
+	- GenerateMatrix(int rows1, int cols1, int rows2, int cols2)
+		- Crea dos matrices con las dimensiones indicadas.
+	- void fillMatrices(Scanner inputScanner, int[][] matrix, String matrixName)
+		- Llena la matriz indicada leyendo enteros desde el teclado. Muestra un contador para cada número (p. ej. "Número # 1").
+	- void displayMatrices(int[][] matrix, String matrixName)
+		- Imprime la matriz por filas y columnas.
+	- int[][] getMatrix1() / int[][] getMatrix2()
+		- Devuelven las matrices para operaciones externas.
 
-- Mantén la lógica en funciones separadas y evita variables globales.
-- El README es intencionalmente corto; si quieres, puedo añadir ejemplos de entrada/salida o generar la plantilla Java con funciones listas. �
+- TwoDimensionalStructure
+	- public static void main(String[] args)
+		- Controla el flujo del programa:
+			1. Pide fila y columna de la matriz 1 y luego sus valores (formato "Elemento # n:").
+			2. Pide fila y columna de la matriz 2 y luego sus valores.
+			3. Muestra ambas matrices.
+	- private static void fillMatrixSequential(Scanner scanner, int[][] matrix)
+		- Helper que pide valores secuencialmente mostrando "Elemento # n:".
+	- private static void copyMatrix(int[][] src, int[][] dest)
+		- Copia los valores de una matriz fuente a una destino (misma dimensión).
+
+- MatrixGenerator
+	- MatrixGenerator()
+		- Clase que administra la creación y almacenamiento de las dos matrices.
+	- void sizeMatrix()
+		- Pide al usuario filas y columnas para ambas matrices e inicializa los arreglos.
+	- void fillMatrices(Scanner inputScanner, int[][] matrix, String matrixName)
+		- Llena la matriz indicada leyendo valores del usuario (muestra "Numero # n").
+	- void displayMatrices(int[][] matrix, String matrixName)
+		- Imprime la matriz con un encabezado y formato de tabla.
+	- int[][] getMatrix1() / int[][] getMatrix2()
+		- Devuelven las matrices internas.
+
+- MatrixAdd
+	- MatrixAdd(int[][] matrix1, int[][] matrix2)
+		- Constructor que recibe las dos matrices a sumar.
+	- int[][] sumMatrices()
+		- Valida dimensiones, realiza la suma y devuelve la matriz resultante.
+	- void displaySumMatrix()
+		- Muestra la matriz suma si fue calculada.
+
+- MatrixSubtraction
+	- MatrixSubtraction(int[][] matrix1, int[][] matrix2)
+		- Constructor que recibe las dos matrices a restar.
+	- int[][] subtractMatrices()
+		- Valida dimensiones, realiza la resta y devuelve la matriz resultante.
+	- void displaySubtract()
+		- Muestra la matriz resta si fue calculada.
+
+- MatrixScalar
+	- MatrixScalar(int[][] matrix, int scalar)
+		- Constructor que recibe la matriz a escalar y el valor escalar.
+	- int[][] scalarProduct()
+		- Calcula el producto escalar y devuelve la matriz resultante.
+	- void displayScalar()
+		- Muestra la matriz resultante del producto escalar.
+	- static int[][] selectMatrix(MatrixGenerator generateMatrix)
+		- Permite al usuario elegir la matriz 1 o 2 (devuelve la seleccionada).
+
+- MatrixMultiplication
+	- MatrixMultiplication(int[][] matrix1, int[][] matrix2)
+		- Constructor que recibe las dos matrices a multiplicar.
+	- int[][] multiplyMatrices()
+		- Valida compatibilidad de dimensiones, realiza la multiplicación y devuelve el resultado.
+	- void displayMultiplication()
+		- Muestra la matriz resultante de la multiplicación si fue calculada.
+
+- MatrixOperationsMenu
+	- static void iniciar(MatrixGenerator generateMatrix)
+		- Muestra un menú con opciones (suma, resta, escalar, multiplicación) y llama a las clases correspondientes para ejecutar y mostrar resultados.
+
