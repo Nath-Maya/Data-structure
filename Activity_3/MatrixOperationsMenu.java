@@ -45,9 +45,11 @@ public class MatrixOperationsMenu {
                 case 2:
                     System.out.print("\nRESTA DE MATRICES.");
 
-                    // Crea un nuevo objeto resta de tipo MatrixSubtraction, usando las matrices que me
+                    // Crea un nuevo objeto resta de tipo MatrixSubtraction, usando las matrices que
+                    // me
                     // entrega matrixGenerator a travez de sus getters
-                    MatrixSubtraction resta = new MatrixSubtraction(generateMatrix.getMatrix1(), generateMatrix.getMatrix2());
+                    MatrixSubtraction resta = new MatrixSubtraction(generateMatrix.getMatrix1(),
+                            generateMatrix.getMatrix2());
 
                     resta.subtractMatrices(); // Llama al metodo para restar las matrices
                     resta.displaySubtract(); // Llama al metodo para mostrar la matriz resultante
@@ -57,6 +59,15 @@ public class MatrixOperationsMenu {
                     break;
                 case 4:
                     System.out.print("\nMULTIPLICACION DE MATRICES.");
+
+                    // Crea un nuevo objeto multiplicacion de tipo MultiplicationMatrix, usando las
+                    // matrices que me
+                    // entrega matrixGenerator a travez de sus getters
+                    MultiplicationMatrix multiplicacion = new MultiplicationMatrix(generateMatrix.getMatrix1(),
+                            generateMatrix.getMatrix2());
+                    multiplicacion.multiplyMatrices(); // Llama al metodo para multiplicar las matrices
+                    multiplicacion.displayMultiplication(); // Llama al metodo para mostrar la matriz resultante
+
                     break;
                 case 5:
                     System.out.print("\nHas salido del programa...⛔");
