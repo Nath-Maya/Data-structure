@@ -1,6 +1,6 @@
 package Activity_3;
 
-public class SumMatrix {
+public class MatrixAdd {
 
     // Atributos
     private int[][] matrix1;
@@ -8,7 +8,7 @@ public class SumMatrix {
     private int[][] resultSumMatrix;
 
     // Constructor
-    public SumMatrix(int[][] matrix1, int[][] matrix2) {
+    public MatrixAdd(int[][] matrix1, int[][] matrix2) {
         this.matrix1 = matrix1;
         this.matrix2 = matrix2;
     }

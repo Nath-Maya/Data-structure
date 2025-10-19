@@ -1,6 +1,6 @@
 package Activity_3;
 
-public class MultiplicationMatrix {
+public class MatrixMultiplication {
 
     // Atributos
     private int[][] matrix1;
@@ -8,7 +8,7 @@ public class MultiplicationMatrix {
     private int[][] resultMultiplication;
 
     // Constructor
-    public MultiplicationMatrix(int[][] matrix1, int[][] matrix2) {
+    public MatrixMultiplication(int[][] matrix1, int[][] matrix2) {
         this.matrix1 = matrix1;
         this.matrix2 = matrix2;
     }

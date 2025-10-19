@@ -2,7 +2,7 @@ package Activity_3;
 
 import java.util.Scanner;
 
-public class ScalarMatrix {
+public class MatrixScalar {
 
     // Atrbutos
     private int[][] matrix;
@@ -10,7 +10,7 @@ public class ScalarMatrix {
     private int[][] resultScalar;
 
     // Constructor
-    public ScalarMatrix(int[][] matrix, int scalar) {
+    public MatrixScalar(int[][] matrix, int scalar) {
         this.matrix = matrix;
         this.scalar = scalar;
         this.resultScalar = new int[matrix.length][matrix[0].length];
@@ -41,7 +41,7 @@ public class ScalarMatrix {
     }
 
     // Metodo estatico para seleccionar la matriz por parte del usuario
-    public static int[][] selectMatrix(GenerateMatrix generateMatrix) {
+    public static int[][] selectMatrix(MatrixGenerator generateMatrix) {
         Scanner entrada = new Scanner(System.in);
         System.out.print("\nCual matriz desea utilizar, 1 o 2 ?: ");
         int option = entrada.nextInt();

@@ -14,7 +14,7 @@ public class TwoDimensionalStructure {
         System.out.println(" PROGRAMA PARA OPERAR CON MATRICES  " + RESET + "\n");
 
         // Crear una instancia de GenerateMatrix
-        GenerateMatrix matrixGenerator = new GenerateMatrix();
+        MatrixGenerator matrixGenerator = new MatrixGenerator();
 
         // Llamar al metodo para determinar el tamaño de las matrices
         matrixGenerator.sizeMatrix();

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class MatrixOperationsMenu {
 
-    public static void iniciar(GenerateMatrix generateMatrix) {
+    public static void iniciar(MatrixGenerator generateMatrix) {
 
         // Colores ANSI
         final String BLUE_BRIGHT = "\u001B[94m";
@@ -36,7 +36,7 @@ public class MatrixOperationsMenu {
 
                     // Crea un nuevo objeto suma de tipo SumMatrix, usando las matrices que me
                     // entrega matrixGenerator a travez de sus getters
-                    SumMatrix suma = new SumMatrix(generateMatrix.getMatrix1(), generateMatrix.getMatrix2());
+                    MatrixAdd suma = new MatrixAdd(generateMatrix.getMatrix1(), generateMatrix.getMatrix2());
 
                     suma.sumMatrices(); // Llama al metodo para sumar las matrices
                     suma.displaySumMatrix(); // Llama al metodo para mostrar la matriz resultante
@@ -57,13 +57,13 @@ public class MatrixOperationsMenu {
                     System.out.print("PRODUCTO ESCALAR.\n");
 
                     // Seleccionar la matriz a utilizar
-                    int[][] selectedMatrix = ScalarMatrix.selectMatrix(generateMatrix);
+                    int[][] selectedMatrix = MatrixScalar.selectMatrix(generateMatrix);
                     System.out.print("Ingrese el valor escalar para multiplicar la matriz seleccionada: ");
 
                     // Leer el valor escalar
                     int scalarValue = entrada.nextInt();
                     // Crear una instancia de ScalarMatrix y realizar el producto escalar
-                    ScalarMatrix escalar = new ScalarMatrix(selectedMatrix, scalarValue);
+                    MatrixScalar escalar = new MatrixScalar(selectedMatrix, scalarValue);
 
                     escalar.scalarProduct(); // Llama al metodo para calcular el producto escalar
                     escalar.displayScalar(); // Llama al metodo para mostrar el resultado del producto escalar
@@ -74,7 +74,7 @@ public class MatrixOperationsMenu {
                     // Crea un nuevo objeto multiplicacion de tipo MultiplicationMatrix, usando las
                     // matrices que me
                     // entrega matrixGenerator a travez de sus getters
-                    MultiplicationMatrix multiplicacion = new MultiplicationMatrix(generateMatrix.getMatrix1(),
+                    MatrixMultiplication multiplicacion = new MatrixMultiplication(generateMatrix.getMatrix1(),
                             generateMatrix.getMatrix2());
                     multiplicacion.multiplyMatrices(); // Llama al metodo para multiplicar las matrices
                     multiplicacion.displayMultiplication(); // Llama al metodo para mostrar la matriz resultante

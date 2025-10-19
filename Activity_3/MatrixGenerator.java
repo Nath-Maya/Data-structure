@@ -2,7 +2,7 @@ package Activity_3;
 
 import java.util.Scanner;
 
-public class GenerateMatrix {
+public class MatrixGenerator {
 
     Scanner inputScanner = new Scanner(System.in);
 
@@ -12,7 +12,7 @@ public class GenerateMatrix {
     private int[][] matrix2;
 
     // CONSTRUCTOR DE LA CLASE
-    public GenerateMatrix() {
+    public MatrixGenerator() {
 
     }
 
