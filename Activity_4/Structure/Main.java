@@ -5,8 +5,9 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
 
-        Birthdate birthdate = new Birthdate(0, 0, 0);
-        birthdate.captureBirthdate(birthdate.inputScanner);
+        //Toma de datos de prueba para Address
+        Address address = new Address("", "", "", "");
+        address.captureAddress(address.inputScanner);
     }
 }
 
