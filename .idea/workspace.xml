@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49433e66-d41e-4aeb-9477-b6967efe7d0c" name="Changes" comment="Add program to classify integers into even and odd numbers&#10;&#10;Implemented VectorNumbers class that:&#10;- Reads user input to fill an integer array&#10;- Separates numbers into even and odd arrays&#10;- Displays the initial vector and the count of even and odd numbers">
-      <change beforePath="$PROJECT_DIR$/Activity_3/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Activity_3/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +119,8 @@
       <workItem from="1760812377584" duration="143000" />
       <workItem from="1760812639620" duration="167000" />
       <workItem from="1760829093812" duration="14000" />
-      <workItem from="1760836621779" duration="438000" />
+      <workItem from="1760836621779" duration="1019000" />
+      <workItem from="1761349290139" duration="2701000" />
     </task>
     <task id="LOCAL-00001" summary="Create MenuCalculadora">
       <option name="closed" value="true" />
