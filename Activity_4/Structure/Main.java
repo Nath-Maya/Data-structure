@@ -1,4 +1,4 @@
-package Activity 4;
+package Activity_4.Structure;
 
 public class Main {
     
@@ -6,3 +6,5 @@ public class Main {
         System.out.println("Hello, World!");
     }
 }
+
+

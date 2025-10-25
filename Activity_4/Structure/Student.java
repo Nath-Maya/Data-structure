@@ -1,4 +1,4 @@
-package Activity 4;
+package Activity_4.Structure;
 
 public class Student {
 
