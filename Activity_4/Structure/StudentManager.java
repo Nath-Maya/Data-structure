@@ -22,7 +22,6 @@ public class StudentManager {
 
         // Capturar datos de las estructuras anidadas
         Birthdate birthdate = new Birthdate(0, 0, 0);
-        birthdate.captureBirthdate(input);
         Address address = new Address("", "", "", "");
         address.captureAddress(input);
         Grades grades = new Grades(0.0, 0.0, 0.0);

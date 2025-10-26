@@ -1,10 +1,6 @@
 package Activity_4.Structure;
 
-import java.util.Scanner;
-
 public class Birthdate {
-
-    Scanner inputScanner = new Scanner(System.in);
 
     // ATRIBUTOS
     // Estructura arreglo para fecha de nacimiento : dia, mes, año
@@ -24,42 +20,22 @@ public class Birthdate {
         return birthdateArray;
     }
 
-    // METODO PARA CAPTURAR FECHA DE NACIMIENTO DESDE CONSOLA
-    public void captureBirthdate(Scanner inputScanner) {
-
-        System.out.println("🗓️ Ingrese su fecha de nacimiento (día/mes/año) en formato de Números:");
-
-        System.out.print("Día: ");
-
-        // Capturar y validar que el dia este entre 1 y 31
-        birthdateArray[0] = inputScanner.nextInt();
-        while (birthdateArray[0] < 1 || birthdateArray[0] > 31) {
-            System.out.println("Día ❌. Por favor ingrese un día entre 1 y 31.");
-            System.out.print("Día: ");
-            birthdateArray[0] = inputScanner.nextInt();
-        }
-
-        System.out.print("Mes: ");
-
-        // Capturar y validar que el mes este entre 1 y 12
-        birthdateArray[1] = inputScanner.nextInt();
-        while (birthdateArray[1] < 1 || birthdateArray[1] > 12) {
-            System.out.println("Mes ❌. Por favor ingrese un mes entre 1 y 12.");
-            System.out.print("Mes: ");
-            birthdateArray[1] = inputScanner.nextInt();
-        }
-
-        System.out.print("Año: ");
-
-        // Capturar y validar que el año no sea negativo
-        birthdateArray[2] = inputScanner.nextInt();
-        while (birthdateArray[2] < 0) {
-            System.out.println("Año ❌. Por favor ingrese un numero que no sea negativo.");
-            System.out.print("Año: ");
-            birthdateArray[2] = inputScanner.nextInt();
-        }
-
-        //Impresion de la fecha de nacimiento capturada
-        System.out.println("☑️ Fecha de nacimiento ingresada con exito: " + birthdateArray[0] + "/" + birthdateArray[1] + "/" + birthdateArray[2]);   
+    public int getDay() {
+        return birthdateArray[0];
     }
+
+    public int getMonth() {
+        return birthdateArray[1];
+    }
+
+    public int getYear() {
+        return birthdateArray[2];
+    }
+
+    // METODO TO STRING PARA IMPRIMIR FECHA DE NACIMIENTO
+    @Override
+    public String toString() {
+        return getDay() + "/" + getMonth() + "/" + getYear();
+    }   
+
 }
