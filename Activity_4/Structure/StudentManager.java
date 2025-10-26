@@ -19,15 +19,8 @@ public class StudentManager {
         System.out.print("Edad del estudiante: ");
         int age = input.nextInt();
         input.nextLine();
+        return null;
 
-        // Capturar datos de las estructuras anidadas
-        Birthdate birthdate = new Birthdate(0, 0, 0);
-        Address address = new Address("", "", "", "");
-        address.captureAddress(input);
-        Grades grades = new Grades(0.0, 0.0, 0.0);
-        grades.captureGrades(input);
-
-        return new Student(idCode, name, lastName, age, birthdate, address, grades);
     }
 
 }
