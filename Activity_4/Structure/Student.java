@@ -54,4 +54,8 @@ public class Student {
         return grades;
     }
 
+    public double getAverageGrade() {
+        return grades.calculateAverage();
+    }
+
 }

@@ -39,4 +39,12 @@ public class Grades {
         }
     }
 
+    // METODO PARA CALCULAR EL PROMEDIO DE LAS NOTAS
+    public double calculateAverage() {
+        double sum = 0.0;
+        for (double grade : gradesMap.values()) {
+            sum += grade;
+        }
+        return sum / gradesMap.size();
+    }
 }
