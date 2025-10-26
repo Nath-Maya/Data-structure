@@ -8,9 +8,8 @@ public class AddressManager {
 
         System.out.println("🏠 Ingrese a continuacion los datos de su direccion");
 
-        //Declarar variables
+        // Declarar variables
         String address, stratum, neighborhood, city;
-
 
         System.out.print("Dirección: ");
         address = inputScanner.nextLine();
@@ -65,7 +64,7 @@ public class AddressManager {
         Address addressObj = new Address(address, stratum, neighborhood, city);
         System.out.println("☑️ Dirección ingresada con éxito: " + addressObj);
         return addressObj;
-        
+
     }
-    
+
 }

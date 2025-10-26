@@ -17,26 +17,13 @@ public class Grades {
         this.gradesMap.put("Nota 3", grade3); // nota 3 se asigna con la clave "Nota 3"
     }
 
-    // METODO GETTER
-    public java.util.HashMap<String, Double> getGradesMap() {
-        return gradesMap;
+    // Constructor vacio para inicializar el objeto sin notas
+    public Grades() {
     }
 
-    // METODO PARA CAPTURAR NOTAS DESDE CONSOLA
-    public void captureGrades(Scanner inputScanner) {
-        System.out.println("📝 Ingresar las notas del estudiante:");
-
-        // Iterar sobre las claves del HashMap para capturar cada nota
-        for (String key : gradesMap.keySet()) {
-            System.out.print(key + ": ");
-            double grade = inputScanner.nextDouble();
-            while (grade < 0 || grade > 5) {
-                System.out.println("⚠️ Nota incorrecta. Debe estar entre 0 y 5. Intente nuevamente:");
-                System.out.print(key + ": ");
-                grade = inputScanner.nextDouble();
-            }
-            gradesMap.put(key, grade);
-        }
+    // GETTERS
+    public java.util.HashMap<String, Double> getGradesMap() {
+        return gradesMap;
     }
 
     // METODO PARA CALCULAR EL PROMEDIO DE LAS NOTAS
@@ -45,6 +32,6 @@ public class Grades {
         for (double grade : gradesMap.values()) {
             sum += grade;
         }
-        return sum / gradesMap.size();
+        return gradesMap.size() > 0 ? sum / gradesMap.size() : 0.0;
     }
 }
