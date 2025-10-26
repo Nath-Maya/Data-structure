@@ -27,7 +27,7 @@ public class Address {
     // METODO PARA CAPTURAR DIRECCION DESDE CONSOLA
     public void captureAddress(Scanner inputScanner) {
 
-        System.out.println("🏠 Ingrese su dirección:");
+        System.out.println("🏠 Ingrese a continuacion los datos de su direccion");
 
         System.out.print("Dirección: ");
         addressArray[0] = inputScanner.nextLine();
