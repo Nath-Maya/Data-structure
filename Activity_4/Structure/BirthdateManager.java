@@ -1,4 +1,5 @@
 package Activity_4.Structure;
+
 import java.util.Scanner;
 
 public class BirthdateManager {
