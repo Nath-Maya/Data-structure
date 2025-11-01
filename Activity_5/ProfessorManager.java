@@ -27,14 +27,19 @@ public class ProfessorManager {
         System.out.println(ANSI_BLUE + "\n--- 📋 REGISTRO DE PROFESOR ---" + ANSI_RESET);
 
         int code;
-        while (true) { // validar que el código sea entero
+        while (true) { // validar que el código sea entero y que no exista previamente
             System.out.print("Ingrese el codigo del profesor: ");
             String line = scanner.nextLine();
             try {
                 code = Integer.parseInt(line.trim());
+                // Validar código duplicado
+                if (list.findByCode(code) != null) {
+                    System.out.println(ANSI_RED + "⚠️ Ya existe un profesor con ese codigo. Intente con otro." + ANSI_RESET);
+                    continue; // volver a pedir
+                }
                 break;
             } catch (NumberFormatException e) {
-                System.out.println("❌ Incorrecto. Debe ingresar un numero entero para el codigo." + ANSI_RED);
+                System.out.println(ANSI_RED + "❌ Incorrecto. Debe ingresar un numero entero para el codigo." + ANSI_RESET);
             }
         }
 
