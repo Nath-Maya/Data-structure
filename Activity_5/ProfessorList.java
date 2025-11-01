@@ -59,13 +59,18 @@ public class ProfessorList {
             head = head.getNext();
             return true;
         }
-        Node prev = head;
-        Node current = head.getNext();
-        while (current != null) {
+        // Caso intermedio o final
+        Node prev = head; // Nodo anterior
+        Node current = head.getNext(); // Nodo actual
+
+        // Recorrer la lista
+        while (current != null) { 
+            // Buscar el codigo
             if (current.getData().getCode() == code) {
-                prev.setNext(current.getNext());
+                prev.setNext(current.getNext()); // Eliminar nodo
                 return true;
             }
+            // Avanzar nodos
             prev = current;
             current = current.getNext();
         }
