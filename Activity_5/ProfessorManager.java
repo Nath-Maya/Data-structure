@@ -102,9 +102,9 @@ public class ProfessorManager {
         // Intentar eliminar el profesor
         boolean removed = list.deleteByCode(code);
         if (removed) {
-            System.out.println("⛔ Profesor eliminado exitosamente.");
+            System.out.println(ANSI_GREEN + "⛔ Profesor eliminado exitosamente." + ANSI_RESET);
         } else {
-            System.out.println("Profesor no ❓ encontrado.");
+            System.out.println(ANSI_RED + "Profesor no ❓ encontrado." + ANSI_RESET);
         }
     }
 }

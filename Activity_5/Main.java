@@ -2,7 +2,6 @@ package Activity_5;
 
 import java.util.Scanner;
 
-
 public class Main {
 
     // METODO PRINCIPAL
@@ -13,6 +12,11 @@ public class Main {
         final String ANSI_RESET = "\u001B[0m";
         final String ANSI_ORANGE = "\u001B[33m";
         final String ANSI_RED = "\u001B[31m";
+        final String ANSI_GREEN = "\u001B[32m";
+        final String ANSI_BLUE = "\u001B[34m";
+
+        System.out.print(ANSI_BLUE + "PROGRAMA DE GESTION DE PROFESORES 👩‍🏫👨‍🏫\n\n" + ANSI_RESET);
+
 
         // instanciar la lista de profesores
         ProfessorList list = new ProfessorList();
@@ -24,8 +28,7 @@ public class Main {
         String option;
         do {
             printMenu();
-            System.out.print("PROGRAMA DE GESTION DE PROFESORES 👩‍🏫👨‍🏫\n");
-            System.out.print("Opciones: ");
+
             option = scanner.nextLine().trim();
 
             // Ejecutar la opcion seleccionada
@@ -50,7 +53,7 @@ public class Main {
                     System.out.println(ANSI_ORANGE + "SALIENDO DEL PROGRAMA... 👋" + ANSI_RESET);
                     break;
                 default:
-                    System.out.println(ANSI_RED + "Esta opcion es incorrecta. Intente de nuevo." + ANSI_RESET   );
+                    System.out.println(ANSI_RED + "Esta opcion es incorrecta. Intente de nuevo." + ANSI_RESET);
             }
         } while (!option.equals("5"));
 
@@ -59,7 +62,7 @@ public class Main {
 
     // Imprimir el menu principal
     private static void printMenu() {
-        
+
         System.out.println("1️⃣  Registrar PROFESOR:");
         System.out.println("2️⃣  Mostrar el listado de PROFESORES:");
         System.out.println("3️⃣  Buscar un profesor por su CÓDIGO:");
