@@ -5,11 +5,11 @@ import java.util.Scanner;
 // Gestor de profesores
 public class ProfessorManager {
 
-     //Color ANSI
-        String ANSI_RESET = "\u001B[0m";
-        String ANSI_GREEN = "\u001B[32m";
-        String ANSI_RED = "\u001B[31m";
-        String ANSI_BLUE = "\u001B[34m";
+    // Color ANSI
+    String ANSI_RESET = "\u001B[0m";
+    String ANSI_GREEN = "\u001B[32m";
+    String ANSI_RED = "\u001B[31m";
+    String ANSI_BLUE = "\u001B[34m";
 
     // ATRIBUTOS
     private ProfessorList list;
@@ -23,8 +23,6 @@ public class ProfessorManager {
 
     // Registrar profesor
     public void registerProfessor(Scanner scanner) {
-
-       
 
         System.out.println(ANSI_BLUE + "\n--- 📋 REGISTRO DE PROFESOR ---" + ANSI_RESET);
 

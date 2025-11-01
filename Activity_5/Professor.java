@@ -1,13 +1,12 @@
 package Activity_5;
 
-
 public class Professor {
 
     // ATRIBUTOS
     private int code; // código del profesor
     private String firstName; // nombre
-    private String lastName;  // apellido
-    private String phone;     // celular
+    private String lastName; // apellido
+    private String phone; // celular
 
     // CONSTRUCTOR
     public Professor(int code, String firstName, String lastName, String phone) {
@@ -24,7 +23,7 @@ public class Professor {
         return code;
     }
 
-    //Metodo para obtener el nombre
+    // Metodo para obtener el nombre
     public String getFirstName() {
         return firstName;
     }
