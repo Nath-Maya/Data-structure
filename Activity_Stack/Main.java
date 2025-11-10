@@ -34,6 +34,15 @@ public class Main {
                     stack.display();
                     pause(scanner);
                     break;
+                    case "3":
+                        try {
+                            Article removed = stack.popOrThrow();
+                            System.out.println(GREEN + "Artículo eliminado: " + removed + RESET);
+                        } catch (java.util.EmptyStackException e) {
+                            System.out.println(RED + "No hay artículos para eliminar." + RESET);
+                        }
+                        pause(scanner);
+                        break;
                 case "0":
                     System.out.println(GREEN + "\nSaliendo del programa..." + RESET);
                     break;
@@ -48,9 +57,10 @@ public class Main {
     // Imprime el menú principal con formato y color
     private static void printMenu() {
         System.out.println(BLUE + "\n**************** MENÚ DEL PROGRAMA 🛒 *************" + RESET);
-        System.out.println("\n1. Insertar un artículo");
-        System.out.println("2. Ver los elementos de la PILA");
-        System.out.println("0. Salir\n");
+    System.out.println("\n1. Insertar un artículo");
+    System.out.println("2. Ver los elementos de la PILA");
+    System.out.println("3. Eliminar artículo (pop)");
+    System.out.println("0. Salir\n");
         
     }
 
