@@ -57,54 +57,16 @@ public class Main {
     // Inserta un artículo leyendo los datos desde la consola
     private static void insertArticle(Stack stack, Scanner scanner) {
         System.out.println(YELLOW + "\n--- Insertar un artículo ---" + RESET);
-
         int code = readInt(scanner, "👉 Ingrese el código del artículo: ", 1);
 
-        // Nombre (no vacío)
-        String name;
-        do {
-            System.out.print("Ingrese el nombre: ");
-            name = scanner.nextLine().trim();
-            if (name.isEmpty()) {
-                System.out.println(RED + "El nombre no puede quedar vacío." + RESET);
-            }
-        } while (name.isEmpty());
-
-        // Detalle (no vacío)
-        String detail;
-        do {
-            System.out.print("Ingrese detalle: ");
-            detail = scanner.nextLine().trim();
-            if (detail.isEmpty()) {
-                System.out.println(RED + "El detalle no puede quedar vacío." + RESET);
-            }
-        } while (detail.isEmpty());
+        String name = readNonEmptyString(scanner, "Ingrese el nombre: ", "El nombre no puede quedar vacío. Por favor ingresa un nombre válido.");
+        String detail = readNonEmptyString(scanner, "Ingrese detalle: ", "El detalle no puede quedar vacío. Por favor ingresa un detalle válido.");
 
         double price = readDouble(scanner, "Ingrese valor: ", 0.0);
 
         Article article = new Article(code, name, detail, price);
         stack.push(article);
         System.out.println(GREEN + "✨ Artículo agregado con éxito!" + RESET);
-    }
-
-    // Leer entero con validación
-    private static int readInt(Scanner scanner, String prompt, int minValue) {
-        int value;
-        while (true) {
-            System.out.print(prompt);
-            String line = scanner.nextLine().trim();
-            // Validacion para que sea entero y mayor o igual a minValue
-            try {
-                value = Integer.parseInt(line);
-                if (value < minValue) {
-                    System.out.println(RED + "El codigo debe ser un entero positivo mayor o igual a " + minValue + "." + RESET);
-                    continue;
-                }
-                return value;
-            } catch (NumberFormatException e) {
-                System.out.println(RED + "Entrada inválida. Por favor escribe un número entero." + RESET);
-            }
-        }
     }
 
     // Leer double con validación
@@ -123,6 +85,36 @@ public class Main {
             } catch (NumberFormatException e) {
                 System.out.println(RED + "Entrada inválida. Por favor escribe un número válido (p. ej. 12000 o 12000.50)." + RESET);
             }
+        }
+    }
+
+    // Leer entero con validación y mínimo aceptable
+    private static int readInt(Scanner scanner, String prompt, int minValue) {
+        int value;
+        while (true) {
+            System.out.print(prompt);
+            String line = scanner.nextLine().trim();
+            try {
+                value = Integer.parseInt(line);
+                if (value < minValue) {
+                    System.out.println(RED + "El código debe ser un número entero positivo mayor o igual a " + minValue + "." + RESET);
+                    continue;
+                }
+                return value;
+            } catch (NumberFormatException e) {
+                System.out.println(RED + "Entrada inválida. Por favor escribe un número entero." + RESET);
+            }
+        }
+    }
+
+    // Leer cadena no vacía con mensaje de error personalizado
+    private static String readNonEmptyString(Scanner scanner, String prompt, String errorMessage) {
+        String input;
+        while (true) {
+            System.out.print(prompt);
+            input = scanner.nextLine().trim();
+            if (!input.isEmpty()) return input;
+            System.out.println(RED + errorMessage + RESET);
         }
     }
 

@@ -1,8 +1,5 @@
 package Activity_Stack;
 
-import java.util.ArrayList;
-import java.util.List;
-
 // Esta es la implementacion dela pila (stack) usando una lista enlazada simple.
 public class Stack {
 
@@ -48,17 +45,5 @@ public class Stack {
         }
     }
 
-    // Metodo para convertir la pila a una lista en orden LIFO
-    public List<Article> toListLifo() {
-        // Crear una lista para almacenar los artículos
-        List<Article> list = new ArrayList<>();
-        // Recorrer la pila desde el tope hacia abajo
-        Node current = top;
-        // Agregar cada artículo a la lista
-        while (current != null) {
-            list.add(current.getData());
-            current = current.getNext();
-        }
-        return list;
-    }
+    // (No hay métodos adicionales para evitar iteraciones innecesarias)
 }
