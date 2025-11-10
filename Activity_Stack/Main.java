@@ -58,9 +58,9 @@ public class Main {
     private static void printMenu() {
         System.out.println(BLUE + "\n**************** MENÚ DEL PROGRAMA 🛒 *************" + RESET);
     System.out.println("\n1. Insertar un artículo");
-    System.out.println("2. Ver los elementos de la PILA");
-    System.out.println("3. Eliminar artículo (pop)");
-    System.out.println("0. Salir\n");
+    System.out.println("2. Vusyakuzar los elementos de la PILA");
+    System.out.println("3. Eliminar un articulo");
+    System.out.println("0. SALIR\n");
         
     }
 
