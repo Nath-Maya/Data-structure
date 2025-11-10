@@ -47,26 +47,40 @@ public class Main {
 
     // Imprime el menú principal con formato y color
     private static void printMenu() {
-        System.out.println(BLUE + "\n**************** MENÚ DEL PROGRAMA *************" + RESET);
+        System.out.println(BLUE + "\n**************** MENÚ DEL PROGRAMA 🛒 *************" + RESET);
         System.out.println("\n1. Insertar un artículo");
-        System.out.println("2. Mostrar los elementos de la pila en orden LIFO");
+        System.out.println("2. Ver los elementos de la PILA");
         System.out.println("0. Salir\n");
-        System.out.println("***********************************************\n" + RESET);
+        
     }
 
     // Inserta un artículo leyendo los datos desde la consola
     private static void insertArticle(Stack stack, Scanner scanner) {
         System.out.println(YELLOW + "\n--- Insertar un artículo ---" + RESET);
 
-        int code = readInt(scanner, "👉 Ingrese el código del artículo: ");
+        int code = readInt(scanner, "👉 Ingrese el código del artículo: ", 1);
 
-        System.out.print("Ingrese el nombre: ");
-        String name = scanner.nextLine().trim();
+        // Nombre (no vacío)
+        String name;
+        do {
+            System.out.print("Ingrese el nombre: ");
+            name = scanner.nextLine().trim();
+            if (name.isEmpty()) {
+                System.out.println(RED + "El nombre no puede quedar vacío." + RESET);
+            }
+        } while (name.isEmpty());
 
-        System.out.print("Ingrese detalle: ");
-        String detail = scanner.nextLine().trim();
+        // Detalle (no vacío)
+        String detail;
+        do {
+            System.out.print("Ingrese detalle: ");
+            detail = scanner.nextLine().trim();
+            if (detail.isEmpty()) {
+                System.out.println(RED + "El detalle no puede quedar vacío." + RESET);
+            }
+        } while (detail.isEmpty());
 
-        double price = readDouble(scanner, "Ingrese valor: ");
+        double price = readDouble(scanner, "Ingrese valor: ", 0.0);
 
         Article article = new Article(code, name, detail, price);
         stack.push(article);
@@ -74,13 +88,18 @@ public class Main {
     }
 
     // Leer entero con validación
-    private static int readInt(Scanner scanner, String prompt) {
+    private static int readInt(Scanner scanner, String prompt, int minValue) {
         int value;
         while (true) {
             System.out.print(prompt);
             String line = scanner.nextLine().trim();
+            // Validacion para que sea entero y mayor o igual a minValue
             try {
                 value = Integer.parseInt(line);
+                if (value < minValue) {
+                    System.out.println(RED + "El codigo debe ser un entero positivo mayor o igual a " + minValue + "." + RESET);
+                    continue;
+                }
                 return value;
             } catch (NumberFormatException e) {
                 System.out.println(RED + "Entrada inválida. Por favor escribe un número entero." + RESET);
@@ -89,13 +108,17 @@ public class Main {
     }
 
     // Leer double con validación
-    private static double readDouble(Scanner scanner, String prompt) {
+    private static double readDouble(Scanner scanner, String prompt, double minValue) {
         double value;
         while (true) {
             System.out.print(prompt);
             String line = scanner.nextLine().trim();
             try {
                 value = Double.parseDouble(line);
+                if (value < minValue) {
+                    System.out.println(RED + "El valor debe ser mayor o igual a " + minValue + "." + RESET);
+                    continue;
+                }
                 return value;
             } catch (NumberFormatException e) {
                 System.out.println(RED + "Entrada inválida. Por favor escribe un número válido (p. ej. 12000 o 12000.50)." + RESET);
