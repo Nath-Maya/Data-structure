@@ -60,5 +60,4 @@ public class Stack {
         }
     }
 
-    // (No hay métodos adicionales para evitar iteraciones innecesarias)
 }
