@@ -49,7 +49,7 @@ public class Stack {
     // Muestra los elementos en orden LIFO sin modificar la pila
     public void display() {
         if (isEmpty()) {
-            System.out.println(YELLOW + "No hay artículos para mostrar." + RESET);
+            System.out.println(YELLOW + "📭 No hay artículos para mostrar." + RESET);
             return;
         }
         // Recorre desde el tope hacia abajo

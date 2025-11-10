@@ -30,16 +30,16 @@ public class Main {
                     pause(scanner);
                     break;
                 case "2":
-                    System.out.println(YELLOW + "\n--- ARTICULOS EN LA PILA ---" + RESET);
+                    System.out.println(YELLOW + "\n--- ARTICULOS EN LA PILA 📋 ---" + RESET);
                     stack.display();
                     pause(scanner);
                     break;
                     case "3":
                         try {
                             Article removed = stack.popOrThrow();
-                            System.out.println(GREEN + "Artículo eliminado: " + removed + RESET);
+                            System.out.println(GREEN + "🗑️ Artículo eliminado: " + removed + RESET);
                         } catch (java.util.EmptyStackException e) {
-                            System.out.println(RED + "No hay artículos para eliminar." + RESET);
+                            System.out.println(RED + "⚠️ No hay artículos para eliminar." + RESET);
                         }
                         pause(scanner);
                         break;
@@ -57,26 +57,26 @@ public class Main {
     // Imprime el menú principal con formato y color
     private static void printMenu() {
         System.out.println(BLUE + "\n**************** MENÚ DEL PROGRAMA 🛒 *************" + RESET);
-    System.out.println("\n1. Insertar un artículo");
-    System.out.println("2. Vusyakuzar los elementos de la PILA");
-    System.out.println("3. Eliminar un articulo");
-    System.out.println("0. SALIR\n");
+    System.out.println("\n1. Insertar un artículo 📝");
+    System.out.println("2. Ver los elementos de la PILA 📋 (LIFO)");
+    System.out.println("3. Eliminar artículo (pop) 🗑️");
+    System.out.println("0. Salir 🚪\n");
         
     }
 
     // Inserta un artículo leyendo los datos desde la consola
     private static void insertArticle(Stack stack, Scanner scanner) {
-        System.out.println(YELLOW + "\n--- Insertar un artículo ---" + RESET);
-        int code = readInt(scanner, "👉 Ingrese el código del artículo: ", 1);
+    System.out.println(YELLOW + "\n--- � Insertar un artículo ---" + RESET);
+    int code = readInt(scanner, "👉 Ingrese el código del artículo: ", 1);
 
         String name = readNonEmptyString(scanner, "Ingrese el nombre: ", "El nombre no puede quedar vacío. Por favor ingresa un nombre válido.");
         String detail = readNonEmptyString(scanner, "Ingrese detalle: ", "El detalle no puede quedar vacío. Por favor ingresa un detalle válido.");
 
         double price = readDouble(scanner, "Ingrese valor: ", 0.0);
 
-        Article article = new Article(code, name, detail, price);
-        stack.push(article);
-        System.out.println(GREEN + "✨ Artículo agregado con éxito!" + RESET);
+    Article article = new Article(code, name, detail, price);
+    stack.push(article);
+    System.out.println(GREEN + "✅ ✨ Artículo agregado con éxito!" + RESET);
     }
 
     // Leer double con validación
@@ -112,7 +112,7 @@ public class Main {
                 }
                 return value;
             } catch (NumberFormatException e) {
-                System.out.println(RED + "Entrada inválida. Por favor escribe un número entero." + RESET);
+                System.out.println(RED + "Entrada INCORRECTA. Por favor escribe un número entero." + RESET);
             }
         }
     }
