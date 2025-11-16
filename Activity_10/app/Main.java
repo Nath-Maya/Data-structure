@@ -16,7 +16,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
 
         // Instanciar el gestor de presupuestos con persistencia
-        String storagePath = "Activity_10/data/profesores.dat";
+        String storagePath = "Activity_10/data/presupuestos.dat";
 
         // archivo por defecto dentro de data/
         BudgetManager manager = new BudgetManager(storagePath);
