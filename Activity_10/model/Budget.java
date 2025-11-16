@@ -1,9 +1,13 @@
 package Activity_10.model;
 
+import java.io.Serializable;
+
 // CLASE QUE REPRESENTA UN PRESUPUESTO
 // Contiene id, nombre cliente, producto, cantidad, precio unitario y precio total.
 
-public class Budget {
+public class Budget implements Serializable {
+
+    private static final long serialVersionUID = 1L;
 
     //ATRIBUTOS
     private int id;
