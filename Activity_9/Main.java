@@ -18,11 +18,9 @@ public class Main {
         System.out.print(ANSI_BLUE + "PROGRAMA DE GESTION DE PROFESORES 👩‍🏫👨‍🏫\n\n" + ANSI_RESET);
 
 
-        // instanciar la lista de profesores
-        ProfessorList list = new ProfessorList();
-
-        // Instanciar el gestor de profesores
-        ProfessorManager manager = new ProfessorManager(list);
+    // Instanciar el gestor moderno de profesores (lista + árbol + persistencia)
+    String storage = "Activity_9/profesores.dat"; // archivo por defecto
+    ProfesorManager manager = new ProfesorManager(storage);
 
         // Bucle del MENU
         String option;
@@ -35,27 +33,35 @@ public class Main {
             switch (option) {
                 case "1":
                     // Registrar profesor
-                    manager.registerProfessor(scanner);
+                    manager.registerProfesor(scanner);
                     break;
                 case "2":
                     // Mostrar listado
                     manager.showAll();
                     break;
                 case "3":
-                    // Buscar por código
-                    manager.searchByCode(scanner);
+                    // Crear y guardar listado en archivo
+                    manager.saveToFile();
                     break;
                 case "4":
-                    // Eliminar por código
-                    manager.deleteByCode(scanner);
+                    // Recuperar datos desde archivo
+                    manager.loadFromFile();
                     break;
                 case "5":
+                    // Buscar por código (usa árbol)
+                    manager.searchByCode(scanner);
+                    break;
+                case "6":
+                    // Eliminar por código (lista + árbol)
+                    manager.deleteByCode(scanner);
+                    break;
+                case "7":
                     System.out.println(ANSI_ORANGE + "SALIENDO DEL PROGRAMA... 👋" + ANSI_RESET);
                     break;
                 default:
                     System.out.println(ANSI_RED + "Esta opcion es incorrecta. Intente de nuevo." + ANSI_RESET);
             }
-        } while (!option.equals("5"));
+        } while (!option.equals("7"));
 
         scanner.close();
     }
@@ -63,11 +69,15 @@ public class Main {
     // Imprimir el menu principal
     private static void printMenu() {
 
-        System.out.println("1️⃣  Registrar PROFESOR:");
-        System.out.println("2️⃣  Mostrar el listado de PROFESORES:");
-        System.out.println("3️⃣  Buscar un profesor por su CÓDIGO:");
-        System.out.println("4️⃣  Eliminar un profesor por su CÓDIGO:");
-        System.out.println("5️⃣  Salir ➡️");
+        System.out.println("******************************************");
+        System.out.println("1. REGISTRAR PROFESOR");
+        System.out.println("2. MOSTRAR LISTADO PROFESORES");
+        System.out.println("3. CREAR Y GUARDAR LISTADO DE PROFESORES EN ARCHIVO");
+        System.out.println("4. RECUPERAR DATOS DEL ARCHIVO");
+        System.out.println("5. BUSCAR PROFESOR POR CÓDIGO (usar árbol)");
+        System.out.println("6. ELIMINAR PROFESOR POR CÓDIGO");
+        System.out.println("7. SALIR");
+        System.out.println("******************************************");
 
     }
 }
