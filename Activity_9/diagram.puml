@@ -1,0 +1,45 @@
+@startuml
+title Activity_9 - Diagrama de clases
+
+class Main {
+}
+
+class Profesor {
+  - int code
+  - String name
+  - String lastName
+  - String phone
+  + getCode(): int
+  + getName(): String
+  + getLastName(): String
+  + getPhone(): String
+  + toString(): String
+}
+
+class BinarySearchTree {
+  - Node root
+  + insert(Profesor): boolean
+  + find(int): Profesor
+  + delete(int): boolean
+  + inOrder(): List<Profesor>
+  + buildFromList(List<Profesor>): void
+}
+
+class ProfesorManager {
+  - List<Profesor> list
+  - BinarySearchTree bst
+  - String storageFile
+  + registerProfesor(Scanner): void
+  + showAll(): void
+  + saveToFile(): void
+  + loadFromFile(): void
+  + searchByCode(Scanner): void
+  + deleteByCode(Scanner): void
+}
+
+Main --> ProfesorManager : uses
+ProfesorManager --> BinarySearchTree : uses
+ProfesorManager --> "List<Profesor>" : manages
+BinarySearchTree "1" *-- "Node" : contains
+
+@enduml
