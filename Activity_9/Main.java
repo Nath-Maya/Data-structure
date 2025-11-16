@@ -4,16 +4,16 @@ import java.util.Scanner;
 
 public class Main {
 
+    // COLORES ANSI (visibles para todos los métodos)
+    private static final String ANSI_RESET = "\u001B[0m";
+    private static final String ANSI_ORANGE = "\u001B[33m";
+    private static final String ANSI_RED = "\u001B[31m";
+    private static final String ANSI_GREEN = "\u001B[32m";
+    private static final String ANSI_BLUE = "\u001B[34m";
+
     // METODO PRINCIPAL
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-
-        // COLORES ANSI
-        final String ANSI_RESET = "\u001B[0m";
-        final String ANSI_ORANGE = "\u001B[33m";
-        final String ANSI_RED = "\u001B[31m";
-        final String ANSI_GREEN = "\u001B[32m";
-        final String ANSI_BLUE = "\u001B[34m";
 
         System.out.print(ANSI_BLUE + "PROGRAMA DE GESTION DE PROFESORES 👩‍🏫👨‍🏫\n\n" + ANSI_RESET);
 
@@ -68,8 +68,7 @@ public class Main {
 
     // Imprimir el menu principal
     private static void printMenu() {
-
-        System.out.println("******************************************");
+        System.out.println(ANSI_BLUE + "******************************************" + ANSI_RESET);
         System.out.println("1. REGISTRAR PROFESOR");
         System.out.println("2. MOSTRAR LISTADO PROFESORES");
         System.out.println("3. CREAR Y GUARDAR LISTADO DE PROFESORES EN ARCHIVO");
@@ -77,7 +76,7 @@ public class Main {
         System.out.println("5. BUSCAR PROFESOR POR CÓDIGO (usar árbol)");
         System.out.println("6. ELIMINAR PROFESOR POR CÓDIGO");
         System.out.println("7. SALIR");
-        System.out.println("******************************************");
+        System.out.println(ANSI_BLUE + "******************************************" + ANSI_RESET);
 
     }
 }
