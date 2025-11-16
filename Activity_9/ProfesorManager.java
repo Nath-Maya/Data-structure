@@ -1,5 +1,6 @@
 package Activity_9;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
@@ -72,9 +73,20 @@ public class ProfesorManager {
 
     // Guardar la lista completa en un archivo (serialización)
     public void saveToFile() {
-        try (FileOutputStream fos = new FileOutputStream(storageFile);
-             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
-            oos.writeObject(list);
+        try {
+            // Asegurarse de que la carpeta exista
+            File f = new File(storageFile);
+            File parent = f.getParentFile();
+            if (parent != null && !parent.exists()) {
+                boolean created = parent.mkdirs();
+                if (!created) {
+                    System.out.println(ANSI_YELLOW + "Advertencia: no se pudo crear la carpeta: " + parent.getPath() + ANSI_RESET);
+                }
+            }
+            try (FileOutputStream fos = new FileOutputStream(f);
+                 ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+                oos.writeObject(list);
+            }
             System.out.println(ANSI_GREEN + "✅ Datos guardados en archivo: " + storageFile + ANSI_RESET);
         } catch (Exception e) {
             System.out.println(ANSI_RED + "Error al guardar datos: " + e.getMessage() + ANSI_RESET);
@@ -84,18 +96,25 @@ public class ProfesorManager {
     // Recuperar la lista desde archivo y reconstruir el árbol
     @SuppressWarnings("unchecked")
     public void loadFromFile() {
-        try (FileInputStream fis = new FileInputStream(storageFile);
-             ObjectInputStream ois = new ObjectInputStream(fis)) {
-            Object obj = ois.readObject();
-            if (obj instanceof List) {
-                list = (List<Profesor>) obj;
-                // Reconstruir árbol
-                bst = new BinarySearchTree();
-                bst.buildFromList(list);
-                System.out.println(ANSI_GREEN + "✅ Datos recuperados desde: " + storageFile + ANSI_RESET);
+        try {
+            File f = new File(storageFile);
+            if (!f.exists()) {
+                System.out.println(ANSI_YELLOW + "No existe archivo de datos en: " + storageFile + ". Use la opción de guardar primero." + ANSI_RESET);
                 return;
             }
-            System.out.println(ANSI_RED + "El archivo no contiene una lista válida." + ANSI_RESET);
+            try (FileInputStream fis = new FileInputStream(f);
+                 ObjectInputStream ois = new ObjectInputStream(fis)) {
+                Object obj = ois.readObject();
+                if (obj instanceof List) {
+                    list = (List<Profesor>) obj;
+                    // Reconstruir árbol
+                    bst = new BinarySearchTree();
+                    bst.buildFromList(list);
+                    System.out.println(ANSI_GREEN + "✅ Datos recuperados desde: " + storageFile + ANSI_RESET);
+                    return;
+                }
+                System.out.println(ANSI_RED + "El archivo no contiene una lista válida." + ANSI_RESET);
+            }
         } catch (Exception e) {
             System.out.println(ANSI_RED + "Error al recuperar datos: " + e.getMessage() + ANSI_RESET);
         }

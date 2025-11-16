@@ -19,7 +19,7 @@ public class Main {
 
 
     // Instanciar el gestor moderno de profesores (lista + árbol + persistencia)
-    String storage = "Activity_9/profesores.dat"; // archivo por defecto
+    String storage = "Activity_9/data/profesores.dat"; // archivo por defecto dentro de data/
     ProfesorManager manager = new ProfesorManager(storage);
 
         // Bucle del MENU
@@ -55,13 +55,13 @@ public class Main {
                     // Eliminar por código (lista + árbol)
                     manager.deleteByCode(scanner);
                     break;
-                case "7":
+                case "0":
                     System.out.println(ANSI_ORANGE + "SALIENDO DEL PROGRAMA... 👋" + ANSI_RESET);
                     break;
                 default:
                     System.out.println(ANSI_RED + "Esta opcion es incorrecta. Intente de nuevo." + ANSI_RESET);
             }
-        } while (!option.equals("7"));
+        } while (!option.equals("0"));
 
         scanner.close();
     }
@@ -69,13 +69,13 @@ public class Main {
     // Imprimir el menu principal
     private static void printMenu() {
         System.out.println(ANSI_BLUE + "******************************************" + ANSI_RESET);
-        System.out.println("1. REGISTRAR PROFESOR");
-        System.out.println("2. MOSTRAR LISTADO PROFESORES");
-        System.out.println("3. CREAR Y GUARDAR LISTADO DE PROFESORES EN ARCHIVO");
-        System.out.println("4. RECUPERAR DATOS DEL ARCHIVO");
-        System.out.println("5. BUSCAR PROFESOR POR CÓDIGO ");
-        System.out.println("6. ELIMINAR PROFESOR POR CÓDIGO");
-        System.out.println("7. SALIR");
+    System.out.println("1. REGISTRAR PROFESOR");
+    System.out.println("2. MOSTRAR LISTADO DE PROFESORES");
+    System.out.println("3. GUARDAR LISTADO EN ARCHIVO");
+    System.out.println("4. RECUPERAR DATOS DESDE ARCHIVO");
+    System.out.println("5. BUSCAR PROFESOR POR CÓDIGO");
+    System.out.println("6. ELIMINAR PROFESOR POR CÓDIGO");
+    System.out.println("0. SALIR");
         System.out.println(ANSI_BLUE + "******************************************" + ANSI_RESET);
 
     }
