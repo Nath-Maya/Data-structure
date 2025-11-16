@@ -73,7 +73,7 @@ public class Main {
         System.out.println("2. MOSTRAR LISTADO PROFESORES");
         System.out.println("3. CREAR Y GUARDAR LISTADO DE PROFESORES EN ARCHIVO");
         System.out.println("4. RECUPERAR DATOS DEL ARCHIVO");
-        System.out.println("5. BUSCAR PROFESOR POR CÓDIGO (usar árbol)");
+        System.out.println("5. BUSCAR PROFESOR POR CÓDIGO ");
         System.out.println("6. ELIMINAR PROFESOR POR CÓDIGO");
         System.out.println("7. SALIR");
         System.out.println(ANSI_BLUE + "******************************************" + ANSI_RESET);

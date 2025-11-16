@@ -58,9 +58,9 @@ public class ProfesorManager {
         System.out.println(ANSI_GREEN + "Profesor agregado ✅" + ANSI_RESET);
     }
 
-    // Mostrar la lista completa en orden de inserción
+    // Mostrar la lista completa en orden de insercion
     public void showAll() {
-        System.out.println(ANSI_BLUE + "\n--- LISTADO DE PROFESORES (orden de inserción) ---" + ANSI_RESET);
+        System.out.println(ANSI_BLUE + "\n--- LISTADO DE PROFESORES  ---" + ANSI_RESET);
         if (list.isEmpty()) {
             System.out.println(ANSI_YELLOW + "(vacío)" + ANSI_RESET);
             return;
